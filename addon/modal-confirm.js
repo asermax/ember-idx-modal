@@ -35,14 +35,13 @@ export default Em.Component.extend({
   'modal-title-classes': '',
   'cancel-button-title': 'No',
   'cancel-button-icons': 'fa fa-thumbs-o-down',
-  'cancel-button-classes': 'btn btn-primary',
-  'submit-button-classes': 'btn btn-default',
+  'cancel-button-classes': 'btn btn-danger',
+  'submit-button-classes': 'btn btn-success',
   'submit-button-title': 'Yes',
   'submit-button-submitting-title': 'Submitting...',
   'submit-button-default-icons': 'fa fa-thumbs-o-up',
   'submit-button-execute-icons': 'fa fa-spinner fa-spin',
   actions: {
-
     /**
      * Invoked when the user clicks the "Yes" button, triggers an action on the controller.
      * 
