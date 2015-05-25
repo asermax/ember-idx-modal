@@ -1,5 +1,6 @@
 //(c) 2014 Indexia, Inc.
 import Em from 'ember';
+import Modal from './modal';
 
 /**
  * A confirmation modal with 'Yes' & 'No' buttons
@@ -9,7 +10,7 @@ import Em from 'ember';
  *
  * @class ModalConfirm
  */
-export default Em.Component.extend({
+export default Modal.extend({
   /**
    * Bound to the action on the controller to be invoked when the 'yes' button is pressed.
    * @property confirm
