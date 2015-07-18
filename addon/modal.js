@@ -138,8 +138,11 @@ export default Em.Component.extend(WithConfigMixin, StyleBindingsMixin, {
       this.set('did-open', 'true');
       this.trigger('shown');
       return Em.run.schedule('afterRender', this, function() {
-        return this.$().focus();
-      });
+        var $this = this.$();
+          if ($this !== undefined) {
+            $this.focus();
+          }
+        });
     });
   },
 
