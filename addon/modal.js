@@ -45,6 +45,21 @@ export default Em.Component.extend(WithConfigMixin, StyleBindingsMixin, {
   styleBindings: ['display'],
 
   /**
+   * Define size of the modal and assign a class to the dialog if needed.
+   */
+  modalSize: null,
+  modalDialogClass: Ember.computed(function() {
+    var modalSize = this.get('modalSize');
+    var modalDialogClass = '';
+
+    if (!!modalSize) {
+      modalDialogClass = 'modal-' + modalSize;
+    }
+
+    return modalDialogClass;
+  }),
+
+  /**
    * Define the tabindex DOM property.
    * Required otherwise no keyDown events
    * @property tabindex
